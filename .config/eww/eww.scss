@@ -1,0 +1,36 @@
+$foreground: #e4f5f5;
+$background: rgba(17, 21, 22, 0.85);
+
+* { 
+	all: unset;
+	color: $foreground; 
+	font-size: 20px; 
+	font-family: "FiraCode Nerd Font Mono";
+} 
+
+.statusbar {
+	padding-top: 5px; 
+	padding-bottom: 5px; 
+	padding-left: 3px;
+	border: 3px solid $foreground;
+	border-right: none;
+} 
+
+label {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.statusbar_battery_style {
+	margin-bottom: 15px;
+	scale trough {
+		border-radius: 12px;
+		border: 2px solid $foreground;
+		min-width: 18px;
+	}
+
+	trough highlight {
+		background-color: $foreground;
+		border-radius: 9px;
+	}
+}

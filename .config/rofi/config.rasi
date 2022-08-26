@@ -1,0 +1,48 @@
+* {
+	bg:	#111516;
+	fg:	#e4f5f5;
+
+	font:	"Fira Code Nerd Font Mono 11";
+
+	foreground:	@fg;
+	background:	@bg;
+
+	alternate-normal-background:	transparent;
+		
+	selected-normal-background:	@fg;
+	selected-normal-foreground:	@bg;
+	
+	border-color:	@fg;
+}
+
+element {
+	padding:	3px;
+}
+
+window {
+	padding:	10px;
+	border:		3px;
+	width:		320px;
+}
+
+listview {
+	scrollbar:	false;
+	border:		0px;
+}
+
+inputbar {
+	background-color:	@fg;
+	children:			[ "textbox-prompt-colon","entry" ];
+	padding:			10px;
+}
+
+entry {
+	border-radius:	0px;
+	placeholder:	"Search...";
+	text-color:		@bg;
+}
+
+textbox-prompt-colon {
+	text-color:	@bg;
+	str:		"|> ";
+}

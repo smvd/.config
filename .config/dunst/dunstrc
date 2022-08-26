@@ -1,0 +1,26 @@
+[global]
+    width = 200
+    height = 100
+    origin = top-center
+    offset = 0x20
+	notification_limit = 10
+    progress_bar = false
+	separator_height = 3
+	frame_color = "#e4f5f5"
+	font = FiraCode Nerd Font Mono 12
+    alignment = center
+    show_age_threshold = -1
+    show_indicators = no
+    icon_position = off
+    corner_radius = 10
+    background = "#111516"
+    foreground = "#e4f5f5"
+
+[urgency_low]
+    timeout = 5
+
+[urgency_normal]
+    timeout = 10
+
+[urgency_critical]
+    timeout = 0
