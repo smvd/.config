@@ -5,3 +5,4 @@ eww open statusbar
 libinput-gestures-setup start &
 dunst &
 pulseaudio &
+~/.scrip/HomePageServer.fish &
