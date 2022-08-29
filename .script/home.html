@@ -1,23 +1,145 @@
 <html>
 	<head>
+		<style>
+			
+			:root {
+				--fg: 	#E4F5F5;
+				--bg: 	#111516;
+			}
+
+			* {
+				all: 		none;
+				color: 		var(--fg);
+				text-align: center;
+			}
+
+			body {
+				background-color: 	var(--bg);
+			}
+
+			.external {
+				display: 	table;
+				position: 	absoulte;
+				top: 		0;
+				left: 		0;
+				height: 	100%;
+				width: 		100%;
+			}
+
+			.middle {
+				display: 		table-cell;
+				vertical-align: middle;
+			}
+
+			.content {
+				margin-left: 			auto;
+				margin-right: 			auto;
+				display: 				grid;
+				grid-template-columns: 	auto auto auto;
+				grid-gap:  				15px;
+				justify-content: 		center;
+			}
+
+			.cell {
+				border: 			3px solid var(--fg);
+				padding: 			20px;
+				width: 				110px;
+				transition: 		0.3s;
+				text-decoration: 	none;
+			}
+
+
+			.cell:hover {
+				background-color: 	var(--fg);
+			}
+
+			.cell:hover * {
+				color: 	var(--bg);
+			}
+
+			h1 {
+				margin: 	0px;
+				font-size: 	20px;
+			}
+
+			h2 {
+				margin: 	10px;
+				font-size: 	40px;
+			}
+
+			h3 {
+				margin: 	0px;
+				font-size: 	15px;
+			}
+
+		</style>
 		<title>Home</title>
-		<link rel="stylesheet" type="text/css" href="home.css">
 	</head>
 	<body>
-	    <div class="external">
+		<div class="external">
 			<div class="middle">
-				<div class="internal">
-					<ul>
-					<li onclick="window.location = 'https://www.reddit.com'">Reddit</li>
-					<li onclick="window.location = 'https://www.discord.com/app'">Discord</li>
-					<li onclick="window.location = 'https://www.github.com'">Github</li>
-					<li onclick="window.location = 'https://store.steampowered.com/'">Steam</li>
-					<li onclick="window.location = 'https://www.youtube.com'">Youtube</li>
-					<li onclick="window.location = 'https://teams.microsoft.com/'">Teams</li>
-					<li onclick="window.location = 'https://mail.google.com'">Gmail</li>
-					<li onclick="window.location = 'https://wiki.archlinux.org'">Arch wiki</li>
-					<li onclick="window.location = 'https://wiki.hyprland.org'">Hyprland wiki</li>
-					</ul>
+				<div class="content">
+					<a class="cell" href="https://www.reddit.com">
+						<h1>1</h1>
+						<h2>Re</h2>
+						<h3>reddit</h3>
+					</a>
+					<a class="cell" href="https://www.discord.com">
+						<h1>2</h1>
+						<h2>Di</h2>
+						<h3>discord</h3>
+					</a>
+					<a class="cell" href="https://www.github.com">
+						<h1>3</h1>
+						<h2>Gi</h2>
+						<h3>github</h3>
+					</a>
+					<a class="cell" href="https://store.steampowered.com">
+						<h1>4</h1>
+						<h2>St</h2>
+						<h3>steam</h3>
+					</a>
+					<a class="cell" href="https://www.youtube.com">
+						<h1>5</h1>
+						<h2>Yo</h2>
+						<h3>youtube</h3>
+					</a>
+					<a class="cell" href="https://teams.microsoft.com">
+						<h1>6</h1>
+						<h2>Te</h2>
+						<h3>teams</h3>
+					</a>
+					<a class="cell" href="https://mail.google.com">
+						<h1>7</h1>
+						<h2>Gm</h2>
+						<h3>gmail</h3>
+					</a>
+					<a class="cell" href="https://wiki.archlinux.org">
+						<h1>8</h1>
+						<h2>Ar</h2>
+						<h3>archlinux</h3>
+					</a>
+					<a class="cell" href="https://wiki.hyprland.org">
+						<h1>9</h1>
+						<h2>Hy</h2>
+						<h3>hyprland</h3>
+					</a>
+					<a class="cell" href="https://fishshell.com">
+						<h1>10</h1>
+						<h2>Fi</h2>
+						<h3>fish</h3>
+					</a>
+					<a class="cell" href="https://sgdelangstraat.sharepoint.com/sites/portaaldoultremontcollege">
+						<h1>11</h1>
+						<h2>Do</h2>
+						<h3>doultremont</h3>
+					</a>
+					<a class="cell" href="https://example.com">
+						<h1>12</h1>
+						<h2>Ex</h2>
+						<h3>exmaple</h3>
+					</a>
+					
 				</div>
 			</div>
 		</div>
