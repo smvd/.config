@@ -4,6 +4,9 @@ end
 
 fish_add_path ~/.script
 
-alias ls=lsd
-alias cat=bat
-alias fetch=gxrfetch
+alias ls='lsd'
+alias cat='bat'
+alias fetch='gxrfetch'
+alias ga='git add .'
+alias gc='git commit -m '
+alias gp='git push'
