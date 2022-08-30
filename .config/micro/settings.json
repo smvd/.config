@@ -1,3 +1,13 @@
 {
-    "colorscheme": "custom"
+    "autosu": true,
+    "clipboard": "terminal",
+    "colorscheme": "custom",
+    "indentchar": "-",
+    "rmtrailingws": true,
+    "statusformatl": " $(modified)$(filename)",
+    "statusformatr": "($(line):$(col))  $(opt:filetype) ",
+    "sucmd": "doas",
+    "tabhighlight": true,
+    "tabmovement": true,
+    "tabstospaces": true
 }

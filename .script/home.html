@@ -1,246 +1,235 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<style>
-			
-			:root {
-				--fg: 	#ffffff;
-				--bg: 	#000000;
-			}
+    <head>
+        <title>Home</title>
+        <style>
+            body {
+                height:             100%;
+                color:              #ffffff;
+                background-color:   #000000;
+            }
 
-			* {
-				all: 		none;
-				color: 		var(--fg);
-				text-align: center;
-			}
+            #center {
+                top:                    0;
+                right:                  0;
+                bottom:                 0;
+                left:                   0;
+                position:               absolute;
+                margin:                 auto;
+                width:                  100%;
+                height:                 100%;
+                display:                grid;
+                grid-gap:               15px;
+                grid-template-columns:  repeat(5, auto);
+                justify-content:        center;
+                align-content:          center;
+            }
 
-			body {
-				background-color: 	var(--bg);
-			}
+            #center a {
+                color:              #ffffff;
+                background-color:   #000000;
+                border:             3px solid #ffffff;
+                width:              150px;
+                height:             150px;
+                display:            grid;
+                align-content:      center;
+                text-align:         center;
+                text-decoration:    none;
+                transition:         0.3s;
+            }
 
-			.external {
-				display: 	table;
-				position: 	absoulte;
-				top: 		0;
-				left: 		0;
-				height: 	100%;
-				width: 		100%;
-			}
+            #center .blank {
+                transform: scale(0);
+            }
 
-			.middle {
-				display: 		table-cell;
-				vertical-align: middle;
-			}
+            #center a:hover {
+                color:              #000000;
+                background-color:   #ffffff;
+                border-color:       #ffffff;
+            }
 
-			.content {
-				margin-left: 			auto;
-				margin-right: 			auto;
-				display: 				grid;
-				grid-template-columns: 	auto auto auto auto auto;
-				grid-gap:  				15px;
-				justify-content: 		center;
-			}
+            #center a * { margin: 0px; }
+            #center a h1 { font-size:  20px; }
+            #center a h2 { font-size:  50px; }
+            #center a h3 { font-size:  15px; }
 
-			.cell {
-				border: 			3px solid var(--fg);
-				padding: 			20px;
-				width: 				110px;
-				height:				110px;
-				transition: 		0.3s;
-				text-decoration: 	none;
-			}
+            #search {
+                color:              #ffffff;
+                background-color:   #000000;
+                border:             3px solid #ffffff;
+                grid-column:        span 5;
+                overflow:           hidden;
+                padding:            10px;
+            }
 
-
-			.cell:hover {
-				background-color: 	var(--fg);
-			}
-
-			.cell:hover * {
-				color: 	var(--bg);
-			}
-
-			.blank {
-				width:	153px;
-				height:	153px;
-			}
-
-			h1 {
-				margin: 	0px;
-				font-size: 	20px;
-			}
-
-			h2 {
-				margin: 	10px;
-				font-size: 	40px;
-			}
-
-			h3 {
-				margin: 	0px;
-				font-size: 	15px;
-			}
-			
-			form {
-				width: 					836px;
-				border: 				3px solid var(--fg);
-				margin: 				auto;
-				margin-bottom: 			15px;
-				display: 				grid;
-				grid-template-columns: 	auto auto;
-				grid-gap: 				0px;
-				justify-content:		left;
-			}
-
-			input {
-				all: 			unset;
-				margin-left: 	10px;
-				text-align: 	left;
-				font-size: 		22px;
-				width: 			780px;
-			}
-
-			button {
-				all: 			unset;
-				margin-left: 	5px;
-				font-size: 		30px;
-				width: 			30px;
-			}
-
-			h4 {
-				font-size:	40px;
-			}
-
-		</style>
-		<title>Home</title>
-	</head>
-	<body>
-		<div class="external">
-			<div class="middle">
-				<div>
-					<form id="search" action="http://www.duckduckgo.com/">
-						<button></button>
-						<input type="text" name="q" placeholder="Search..." autofocus required/>
-					</form>
-				</div>
-				<div class="content">
-					<a class="cell" href="https://example.com">
-						<h1>1</h1>
-						<h2>Ze</h2>
-						<h3>Zermelo</h3>
-					</a>
-					<a class="cell" href="https://teams.microsoft.com">
-						<h1>2</h1>
-						<h2>Te</h2>
-						<h3>Teams</h3>
-					</a>
-					<a class="cell" href="https://www.github.com">
-						<h1>3</h1>
-						<h2>Gi</h2>
-						<h3>Github</h3>
-					</a>
-					<a class="cell" href="https://www.spotify.com/nl">
-						<h1>4</h1>
-						<h2>Sp</h2>
-						<h3>Spotify</h3>
-					</a>
-					<a class="cell" href="https://store.steampowered.com">
-						<h1>5</h1>
-						<h2>St</h2>
-						<h3>Steam</h3>
-					</a>
-					<a class="cell" href="https://example.com">
-						<h1>6</h1>
-						<h2>Ma</h2>
-						<h3>Magister</h3>
-					</a>
-					<a class="cell" href="https://mail.google.com">
-						<h1>7</h1>
-						<h2>Gm</h2>
-						<h3>Gmail</h3>
-					</a>
-					<a class="cell" href="https://fishshell.com">
-						<h1>8</h1>
-						<h2>Fi</h2>
-						<h3>Fish</h3>
-					</a>
-					<a class="cell" href="https://www.youtube.com">
-						<h1>9</h1>
-						<h2>Yo</h2>
-						<h3>Youtube</h3>
-					</a>
-					<a class="cell" href="https://www.protondb.com">
-						<h1>10</h1>
-						<h2>Pr</h2>
-						<h3>Protondb</h3>
-					</a>
-					<a class="cell" href="https://sgdelangstraat.sharepoint.com/sites/portaaldoultremontcollege">
-						<h1>11</h1>
-						<h2>Do</h2>
-						<h3>Doultremont</h3>
-					</a>
-					<a class="cell" href="https://www.discord.com">
-						<h1>12</h1>
-						<h2>Di</h2>
-						<h3>Discord</h3>
-					</a>
-					<a class="cell" href="https://wiki.hyprland.org">
-						<h1>13</h1>
-						<h2>Hy</h2>
-						<h3>Hyprland</h3>
-					</a>
-					<a class="cell" href="https://elkowar.github.io/eww">
-						<h1>14</h1>
-						<h2>Ew</h2>
-						<h3>Eww</h3>
-					</a>
-					<a class="cell" href="https://www.gog.com">
-						<h1>15</h1>
-						<h2>Go</h2>
-						<h3>Gog</h3>
-					</a>
-					<a class="cell" href="https://onedrive.live.com">
-						<h1>16</h1>
-						<h2>On</h2>
-						<h3>Onedrive</h3>
-					</a>
-					<a class="cell" href="https://www.reddit.com">
-						<h1>17</h1>
-						<h2>Re</h2>
-						<h3>Reddit</h3>
-					</a>
-					<a class="cell" href="https://wiki.archlinux.org">
-						<h1>18</h1>
-						<h2>Ar</h2>
-						<h3>Archlinux</h3>
-					</a>
-					<a class="cell" href="https://www.disneyplus.com/en-nl">
-						<h1>19</h1>
-						<h2>Di</h2>
-						<h3>Disney+</h3>
-					</a>
-					<a class="blank">
-					</a>
-					<a class="blank">
-					</a>
-					<a class="cell" href="https://web.whatsapp.com">
-						<h1>20</h1>
-						<h2>Wh</h2>
-						<h3>Whatsapp</h3>
-					</a>
-					<a class="blank">
-					</a>
-					<a class="cell" href="https://www.netflix.com/nl-en">
-						<h1>21</h1>
-						<h2>Ne</h2>
-						<h3>Netflix</h3>
-					</a>
-					<a class="blank">
-					</a>
-					
-
-
-
-
-				</div>
-			</div>
-		</div>
-	</body>
+            #search input {
+                all:        unset;
+                font-size:  20px;
+                width:      100%;
+            }
+        </style>
+        <script>
+            window.onload = function () {
+                document.getElementById("search").reset();
+            }
+        </script>
+    </head>
+    <body>
+        <div id="center">
+            <form id="search" action="http://www.duckduckgo.com/">
+                <input type="text" name="q" placeholder="Search..." autofocus required/>
+            </form>
+            
+            <a href="https://github.com/">
+                <h1>1</h1>
+                <h2>Gi</h2>
+                <h3>Github</h3>
+            </a>
+            
+            <a href="https://fishshell.com/">
+                <h1>2</h1>
+                <h2>Fi</h2>
+                <h3>Fishshell</h3>
+            </a>
+            
+            <a href="https://w3schools.com/">
+                <h1>3</h1>
+                <h2>W3</h2>
+                <h3>W3schools</h3>
+            </a>
+            
+            <a href="https://geeksforgeeks.org/">
+                <h1>4</h1>
+                <h2>Ge</h2>
+                <h3>GeeksforGeeks</h3>
+            </a>
+            
+            <a href="https://example.com/" class="blank">
+                <h1>5</h1>
+                <h2>Ze</h2>
+                <h3>Zermelo</h3>
+            </a>
+            
+            <a href="https://example.com/">
+                <h1>5</h1>
+                <h2>Ze</h2>
+                <h3>Zermelo</h3>
+            </a>
+            
+            <a href="https://example.com/">
+                <h1>6</h1>
+                <h2>Ma</h2>
+                <h3>Magister</h3>
+            </a>
+            
+            <a href="https://sgdelangstraat.sharepoint.com/sites/portaaldoultremontcollege/">
+                <h1>7</h1>
+                <h2>Do</h2>
+                <h3>Doultremont</h3>
+            </a>
+            
+            <a href="https://teams.microsoft.com/">
+                <h1>8</h1>
+                <h2>Te</h2>
+                <h3>Teams</h3>
+            </a>
+            
+            <a href="https://mail.google.com/">
+                <h1>9</h1>
+                <h2>Gm</h2>
+                <h3>Gmail</h3>
+            </a>
+            
+            <a href="https://reddit.com/" class="blank">
+                <h1>10</h1>
+                <h2>Re</h2>
+                <h3>Reddit</h3>
+            </a>
+            
+            <a href="https://reddit.com/">
+                <h1>10</h1>
+                <h2>Re</h2>
+                <h3>Reddit</h3>
+            </a>
+            
+            <a href="https://youtube.com/">
+                <h1>11</h1>
+                <h2>Yo</h2>
+                <h3>Youtube</h3>
+            </a>
+            
+            <a href="https://disneyplus.com/">
+                <h1>12</h1>
+                <h2>Di</h2>
+                <h3>Disney+</h3>
+            </a>
+            
+            <a href="https://netflix.com/">
+                <h1>13</h1>
+                <h2>Ne</h2>
+                <h3>Netflix</h3>
+            </a>
+            
+            <a href="https://wiki.hyprland.org/" class="blank">
+                <h1>14</h1>
+                <h2>Hy</h2>
+                <h3>Hyprland</h3>
+            </a>
+            
+            <a href="https://wiki.hyprland.org/">
+                <h1>14</h1>
+                <h2>Hy</h2>
+                <h3>Hyprland</h3>
+            </a>
+            
+            <a href="https://elkowar.github.io/eww/">
+                <h1>15</h1>
+                <h2>Ew</h2>
+                <h3>eww</h3>
+            </a>
+            
+            <a href="https://wiki.archlinux.org/">
+                <h1>16</h1>
+                <h2>Ar</h2>
+                <h3>Archlinux</h3>
+            </a>
+            
+            <a href="https://store.steampowered.com/" class="blank">
+                <h1>17</h1>
+                <h2>St</h2>
+                <h3>Steam</h3>
+            </a>
+            
+            <a href="https://store.steampowered.com/">
+                <h1>17</h1>
+                <h2>St</h2>
+                <h3>Steam</h3>
+            </a>
+            
+            <a href="https://protondb.com/">
+                <h1>18</h1>
+                <h2>Pr</h2>
+                <h3>Protondb</h3>
+            </a>
+            
+            <a href="https://discord.com/">
+                <h1>19</h1>
+                <h2>Di</h2>
+                <h3>Discord</h3>
+            </a>
+            
+            <a href="https://web.whatsapp.com/">
+                <h1>20</h1>
+                <h2>Wh</h2>
+                <h3>Whatsapp</h3>
+            </a>
+            
+            <a href="https://$3$/" class="blank">
+                <h1>$0$</h1>
+                <h2>$1$</h2>
+                <h3>$2$</h3>
+            </a>
+            
+        </div>
+    </body>
 </html>
