@@ -1,6 +1,6 @@
 * {
-	bg:	#111516;
-	fg:	#e4f5f5;
+	bg:	#000000;
+	fg:	#ffffff;
 
 	font:	"Fira Code Nerd Font Mono 11";
 

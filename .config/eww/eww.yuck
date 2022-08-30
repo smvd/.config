@@ -21,7 +21,6 @@
 
 (defwidget statusbar_widget []
 	(centerbox
-		:style "background-color: rgba(17, 21, 22, 0.85)"
 		:class "statusbar"
 		:orientation "v"
 		(box
