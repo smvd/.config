@@ -3,6 +3,7 @@ if status is-interactive
 end
 
 fish_add_path ~/.script
+fish_add_path ~/.local/bin
 
 alias ls='lsd'
 alias cat='bat'
