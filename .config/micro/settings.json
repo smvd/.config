@@ -2,7 +2,7 @@
     "autosu": true,
     "clipboard": "terminal",
     "colorscheme": "custom",
-    "indentchar": "-",
+    "mkparents": true,
     "rmtrailingws": true,
     "statusformatl": " $(modified)$(filename)",
     "statusformatr": "($(line):$(col))  $(opt:filetype) ",
