@@ -1,0 +1,3 @@
+[] Check for updates on startup
+[] Check for failed services on startup
+[] Clear really old cache data on startup
