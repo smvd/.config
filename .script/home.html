@@ -1,235 +1,276 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home</title>
         <style>
-            body {
-                height:             100%;
-                color:              #ffffff;
-                background-color:   #000000;
-            }
+        body {background-color: #000000;}
 
-            #center {
-                top:                    0;
-                right:                  0;
-                bottom:                 0;
-                left:                   0;
-                position:               absolute;
-                margin:                 auto;
-                width:                  100%;
-                height:                 100%;
-                display:                grid;
-                grid-gap:               15px;
-                grid-template-columns:  repeat(5, auto);
-                justify-content:        center;
-                align-content:          center;
-            }
+        .external {
+            display:    table;
+            position:   absolute;
+            top:        0;
+            left:       0;
+            height:     100%;
+            width:      100%;
+        }
 
-            #center a {
-                color:              #ffffff;
-                background-color:   #000000;
-                border:             3px solid #ffffff;
-                width:              150px;
-                height:             150px;
-                display:            grid;
-                align-content:      center;
-                text-align:         center;
-                text-decoration:    none;
-                transition:         0.3s;
-            }
+        .middle {
+            display:        table-cell;
+            vertical-align: middle;
+        }
 
-            #center .blank {
-                transform: scale(0);
-            }
+        .content {
+            margin-left:            auto;
+            margin-right:           auto;
+            display:                grid;
+            grid-template-columns:  auto auto auto auto auto;
+            grid-gap:               15px;
+            justify-content:        center;
+        }
 
-            #center a:hover {
-                color:              #000000;
-                background-color:   #ffffff;
-                border-color:       #ffffff;
-            }
+        .blank {
+            color:              #ffffff00;
+            background-color:   #ffffff00;
+            border:             3px solid #ffffff00;
+            width:              110px;
+            height:             110px;
+        }
 
-            #center a * { margin: 0px; }
-            #center a h1 { font-size:  20px; }
-            #center a h2 { font-size:  50px; }
-            #center a h3 { font-size:  15px; }
+        .school {
+            color:              #ff4343;
+            background-color:   #000000;
+            border:             3px solid #ff4343;
+            text-align:         left;
+            width:              110px;
+            height:             110px;
+            padding:            20px;
+            transition:	        0.3s;
+            text-decoration:    none;
+        }
 
-            #search {
-                color:              #ffffff;
-                background-color:   #000000;
-                border:             3px solid #ffffff;
-                grid-column:        span 5;
-                overflow:           hidden;
-                padding:            10px;
-            }
+        .school:hover {
+            color:              #000000;
+            background-color:   #ff4343;
+            border:             3px solid #ff4343;
+            text-align:         left;
+        }
 
-            #search input {
-                all:        unset;
-                font-size:  20px;
-                width:      100%;
-            }
-        </style>
-        <script>
-            window.onload = function () {
-                document.getElementById("search").reset();
-            }
-        </script>
+        .media {
+            color:              #ffff43;
+            background-color:   #000000;
+            border:             3px solid #ffff43;
+            text-align:         left;
+            width:              110px;
+            height:             110px;
+            padding:            20px;
+            transition:	        0.3s;
+            text-decoration:    none;
+        }
+
+        .media:hover {
+            color:              #000000;
+            background-color:   #ffff43;
+            border:             3px solid #ffff43;
+            text-align:         left;
+        }
+
+        .development {
+            color:              #4260FF;
+            background-color:   #000000;
+            border:             3px solid #4260FF;
+            text-align:         left;
+            width:              110px;
+            height:             110px;
+            padding:            20px;
+            transition:	        0.3s;
+            text-decoration:    none;
+        }
+
+        .development:hover {
+            color:              #000000;
+            background-color:   #4260FF;
+            border:             3px solid #4260FF;
+            text-align:         left;
+        }
+
+        .contact {
+            color:              #ff43ff;
+            background-color:   #000000;
+            border:             3px solid #ff43ff;
+            text-align:         left;
+            width:              110px;
+            height:             110px;
+            padding:            20px;
+            transition:	        0.3s;
+            text-decoration:    none;
+        }
+
+        .contact:hover {
+            color:              #000000;
+            background-color:   #ff43ff;
+            border:             3px solid #ff43ff;
+            text-align:         left;
+        }
+
+        .gaming {
+            color:              #36cccf;
+            background-color:   #000000;
+            border:             3px solid #36cccf;
+            text-align:         left;
+            width:              110px;
+            height:             110px;
+            padding:            20px;
+            transition:	        0.3s;
+            text-decoration:    none;
+        }
+
+        .gaming:hover {
+            color:              #000000;
+            background-color:   #36cccf;
+            border:             3px solid #36cccf;
+            text-align:         left;
+        }
+
+
+
+        h1 {margin: 0px;                font-size: 20px;}
+        h2 {margin: 10px 0px 10px 0px;  font-size: 40px;}
+        h3 {margin: 0px;                font-size: 15px;}
+    </style>
+    <title>Home</title>
     </head>
     <body>
-        <div id="center">
-            <form id="search" action="http://www.duckduckgo.com/">
-                <input type="text" name="q" placeholder="Search..." autofocus required/>
-            </form>
-            
-            <a href="https://github.com/">
-                <h1>1</h1>
-                <h2>Gi</h2>
-                <h3>Github</h3>
-            </a>
-            
-            <a href="https://example.com/">
-                <h1>5</h1>
-                <h2>Ze</h2>
-                <h3>Zermelo</h3>
-            </a>
-            
-            <a href="https://reddit.com/">
-                <h1>10</h1>
-                <h2>Re</h2>
-                <h3>Reddit</h3>
-            </a>
-            
-            <a href="https://wiki.hyprland.org/">
-                <h1>14</h1>
-                <h2>Hy</h2>
-                <h3>Hyprland</h3>
-            </a>
-            
-            <a href="https://store.steampowered.com/">
-                <h1>17</h1>
-                <h2>St</h2>
-                <h3>Steam</h3>
-            </a>
-            
-            <a href="https://fishshell.com/">
-                <h1>2</h1>
-                <h2>Fi</h2>
-                <h3>Fishshell</h3>
-            </a>
-            
-            <a href="https://example.com/">
-                <h1>6</h1>
-                <h2>Ma</h2>
-                <h3>Magister</h3>
-            </a>
-            
-            <a href="https://youtube.com/">
-                <h1>11</h1>
-                <h2>Yo</h2>
-                <h3>Youtube</h3>
-            </a>
-            
-            <a href="https://elkowar.github.io/eww/">
-                <h1>15</h1>
-                <h2>Ew</h2>
-                <h3>eww</h3>
-            </a>
-            
-            <a href="https://protondb.com/">
-                <h1>18</h1>
-                <h2>Pr</h2>
-                <h3>Protondb</h3>
-            </a>
-            
-            <a href="https://w3schools.com/">
-                <h1>3</h1>
-                <h2>W3</h2>
-                <h3>W3schools</h3>
-            </a>
-            
-            <a href="https://sgdelangstraat.sharepoint.com/sites/portaaldoultremontcollege/">
-                <h1>7</h1>
-                <h2>Do</h2>
-                <h3>Doultremont</h3>
-            </a>
-            
-            <a href="https://disneyplus.com/">
-                <h1>12</h1>
-                <h2>Di</h2>
-                <h3>Disney+</h3>
-            </a>
-            
-            <a href="https://wiki.archlinux.org/">
-                <h1>16</h1>
-                <h2>Ar</h2>
-                <h3>Archlinux</h3>
-            </a>
-            
-            <a href="https://discord.com/">
-                <h1>19</h1>
-                <h2>Di</h2>
-                <h3>Discord</h3>
-            </a>
-            
-            <a href="https://geeksforgeeks.org/">
-                <h1>4</h1>
-                <h2>Ge</h2>
-                <h3>GeeksforGeeks</h3>
-            </a>
-            
-            <a href="https://teams.microsoft.com/">
-                <h1>8</h1>
-                <h2>Te</h2>
-                <h3>Teams</h3>
-            </a>
-            
-            <a href="https://netflix.com/">
-                <h1>13</h1>
-                <h2>Ne</h2>
-                <h3>Netflix</h3>
-            </a>
-            
-            <a href="https://web.whatsapp.com/" class="blank">
-                <h1>20</h1>
-                <h2>Wh</h2>
-                <h3>Whatsapp</h3>
-            </a>
-            
-            <a href="https://web.whatsapp.com/">
-                <h1>20</h1>
-                <h2>Wh</h2>
-                <h3>Whatsapp</h3>
-            </a>
-            
-            <a href="https://mail.google.com/" class="blank">
-                <h1>9</h1>
-                <h2>Gm</h2>
-                <h3>Gmail</h3>
-            </a>
-            
-            <a href="https://mail.google.com/">
-                <h1>9</h1>
-                <h2>Gm</h2>
-                <h3>Gmail</h3>
-            </a>
-            
-            <a href="https://$3$/" class="blank">
-                <h1>$0$</h1>
-                <h2>$1$</h2>
-                <h3>$2$</h3>
-            </a>
-            
-            <a href="https://$3$/" class="blank">
-                <h1>$0$</h1>
-                <h2>$1$</h2>
-                <h3>$2$</h3>
-            </a>
-            
-            <a href="https://$3$/" class="blank">
-                <h1>$0$</h1>
-                <h2>$1$</h2>
-                <h3>$2$</h3>
-            </a>
-            
+        <div class="external">
+            <div class="middle">
+                <div class="content">
+                    <a class="school" href="https://sgdelangstraat.zportal.nl/main">
+                        <h1>1</h1>
+                        <h2>Ze</h2>
+                        <h3>Zermelo</h3>
+                    </a>
+                    <a class="media" href="https://disneyplus.com/en-nl">
+                        <h1>2</h1>
+                        <h2>Di</h2>
+                        <h3>Disney+</h3>
+                    </a>
+                    <a class="media" href="https://spotify.com/nl">
+                        <h1>3</h1>
+                        <h2>Sp</h2>
+                        <h3>Spotify</h3>
+                    </a>
+                    <a class="media" href="https://nederland.fm">
+                        <h1>4</h1>
+                        <h2>Ra</h2>
+                        <h3>Radio</h3>
+                    </a>
+                    <a class="media" href="https://deviantart.com">
+                        <h1>5</h1>
+                        <h2>De</h2>
+                        <h3>Devianart</h3>
+                    </a>
+                    <a class="school" href="https://delangstraat.magister.net/magister/#/vandaag">
+                        <h1>6</h1>
+                        <h2>Ma</h2>
+                        <h3>Magister</h3>
+                    </a>
+                    <a class="school" href="https://sgdelangstraat.sharepoint.com/sites/portaaldoultremontcollege">
+                        <h1>7</h1>
+                        <h2>Do</h2>
+                        <h3>Doultremont</h3>
+                    </a>
+                    <a class="media" href="https://youtube.com">
+                        <h1>8</h1>
+                        <h2>Yo</h2>
+                        <h3>Youtube</h3>
+                    </a>
+                    <a class="media" href="https://netflix.com/nl-en">
+                        <h1>9</h1>
+                        <h2>Ne</h2>
+                        <h3>Netflix</h3>
+                    </a>
+                    <a class="contact" href="https://reddit.com">
+                        <h1>10</h1>
+                        <h2>Re</h2>
+                        <h3>Reddit</h3>
+                    </a>
+                    <a class="school" href="https://teams.microsoft.com">
+                        <h1>11</h1>
+                        <h2>Te</h2>
+                        <h3>Teams</h3>
+                    </a>
+                    <a class="school" href="https://onedrive.live.com">
+                        <h1>12</h1>
+                        <h2>On</h2>
+                        <h3>Onedrive</h3>
+                    </a>
+                    <a class="development" href="https://github.com">
+                        <h1>13</h1>
+                        <h2>Gi</h2>
+                        <h3>Github</h3>
+                    </a>
+                    <a class="contact" href="https://discord.com/app">
+                        <h1>14</h1>
+                        <h2>Di</h2>
+                        <h3>Discord</h3>
+                    </a>
+                    <a class="contact" href="https://web.whatsapp.com">
+                        <h1>15</h1>
+                        <h2>Wh</h2>
+                        <h3>Whatsapp</h3>
+                    </a>
+                    <a class="school" href="https://print.sgdelangstraat.nl/user">
+                        <h1>16</h1>
+                        <h2>Pr</h2>
+                        <h3>Print</h3>
+                    </a>
+                    <a class="development" href="https://wiki.hyprland.org">
+                        <h1>17</h1>
+                        <h2>Hy</h2>
+                        <h3>Hyprland</h3>
+                    </a>
+                    <a class="development" href="https://wiki.archlinux.org">
+                        <h1>18</h1>
+                        <h2>Ar</h2>
+                        <h3>Archlinux</h3>
+                    </a>
+                    <a class="development" href="https://elkowar.github.io/eww">
+                        <h1>19</h1>
+                        <h2>Ew</h2>
+                        <h3>Eww</h3>
+                    </a>
+                    <a class="gaming" href="https://protondb.com">
+                        <h1>20</h1>
+                        <h2>Pr</h2>
+                        <h3>Protondb</h3>
+                    </a>
+                    <a class="development" href="https://fishshell.com">
+                        <h1>21</h1>
+                        <h2>Fi</h2>
+                        <h3>Fish</h3>
+                    </a>
+                    <a class="development" href="https://hoogle.haskell.org">
+                        <h1>22</h1>
+                        <h2>Ho</h2>
+                        <h3>Hoogle</h3>
+                    </a>
+                    <a class="development" href="https://coolors.co/generate">
+                        <h1>23</h1>
+                        <h2>Co</h2>
+                        <h3>Coolors</h3>
+                    </a>
+                    <a class="gaming" href="https://store.steampowered.com">
+                        <h1>24</h1>
+                        <h2>St</h2>
+                        <h3>Steam</h3>
+                    </a>
+                    <a class="gaming" href="https://lutris.net">
+                        <h1>25</h1>
+                        <h2>Lu</h2>
+                        <h3>Lutris</h3>
+                    </a>
+
+                </div>
+            </div>
         </div>
     </body>
 </html>
+

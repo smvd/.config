@@ -1,6 +1,6 @@
 * {
 	bg:	#000000;
-	fg:	#ffffff;
+	fg:	#eeeeee;
 
 	font:	"Fira Code Nerd Font Mono 11";
 
@@ -8,10 +8,10 @@
 	background:	@bg;
 
 	alternate-normal-background:	transparent;
-		
+
 	selected-normal-background:	@fg;
 	selected-normal-foreground:	@bg;
-	
+
 	border-color:	@fg;
 }
 
@@ -44,5 +44,5 @@ entry {
 
 textbox-prompt-colon {
 	text-color:	@bg;
-	str:		"|> ";
+	str:		"|>";
 }

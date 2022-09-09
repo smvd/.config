@@ -1,36 +1,33 @@
-$foreground: #ffffff;
-$background: #000000;
+$foreground:    #EEEEEE;
+$background:    #000000;
 
-* { 
+* {
 	all: unset;
-	color: $foreground; 
-	font-size: 20px; 
-	font-family: "FiraCode Nerd Font Mono";
-} 
+	font-size: 20px;
+	font-family: "DM Mono";
+}
 
 .statusbar {
-	padding-top: 5px; 
-	padding-bottom: 5px; 
-	padding-left: 3px;
-	border: 3px solid $foreground;
-	border-right: none;
-} 
+    background-color:   $background;
+    color:              $foreground;
+    border:             3px solid $foreground;
+    border-right:       none;
+    border-radius:      6px 0px 0px 6px;
+    padding-left:       4px;
+}
 
 label {
-	margin-top: 5px;
-	margin-bottom: 5px;
+    padding:   5px 0px 5px 0px;
 }
 
 .statusbar_battery_style {
-	margin-bottom: 15px;
 	scale trough {
-		border-radius: 12px;
+		border-radius: 6px;
 		border: 2px solid $foreground;
 		min-width: 18px;
 	}
 
 	trough highlight {
 		background-color: $foreground;
-		border-radius: 9px;
 	}
 }
