@@ -9,5 +9,6 @@
     "sucmd": "doas",
     "tabhighlight": true,
     "tabmovement": true,
-    "tabstospaces": true
+    "tabstospaces": true,
+    "wordwrap": true
 }

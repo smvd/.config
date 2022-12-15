@@ -1,0 +1,39 @@
+@import "header.css";
+@import "block.css";
+@import "menu.css";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+body {
+    background-color: #000;
+    color: #fff;
+    max-width: 1280px;
+    margin: auto;
+    font-family: 'Playfair Display', serif;
+    font-size: 110%;
+}
+
+.row img {
+    width: 100%;
+}
+
+#close-button {
+    text-decoration: none;
+    color: #fff;
+}
+
+@media screen and (max-width: 880px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .imageA {display: none;}
+  .imageB {display: flex;}
+
+  #navbar {display: none;}
+  #menu-button {display: block;}
+}
+
+/* @media screen and (max-width: 430px) { */
+  /* #logo {display: none;} */
+  /* #title {padding-left: 10px;} */
+/* } */

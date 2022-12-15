@@ -6,15 +6,16 @@
 	notification_limit = 10
     progress_bar = false
 	separator_height = 3
-	frame_color = "#eeeeee"
-	font = FiraCode Nerd Font Mono 12
+	font = Dm Mono 12
     alignment = center
     show_age_threshold = -1
     show_indicators = no
     icon_position = off
-    corner_radius = 6
-    background = "#000000"
-    foreground = "#eeeeee"
+    corner_radius = 10
+    frame_color = "#eeeeee"
+    background = "#eeeeee"
+    foreground = "#000000"
+    format = "%s\n%b"
 
 [urgency_low]
     timeout = 5

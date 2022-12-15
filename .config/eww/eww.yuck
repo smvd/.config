@@ -18,47 +18,73 @@
 	:interval   "3s"
 	:run-while  true
 	`~/.script/GetNetwork.fish`)
+(defpoll statusbar_mic_var
+    :interval   "3s"
+    :run-while  true
+    `~/.script/GetMic.fish`)
+(defpoll statusbar_audio_var
+    :interval   "3s"
+    :run-while  true
+    `~/.script/GetAudio.fish`)
+
 
 (defwidget statusbar_widget []
-    (centerbox
+    (box
         :class          "statusbar"
         :orientation    "v"
+        :space-evenly   false
         (box
             :orientation    "v"
             :style          "padding-top: 4px"
-            :space-evenly   false
-            (label
-                :text   statusbar_network_var)
-            (label
-                :text   statusbar_bluetooth_var))
+            :height         "250"
+            (center
+                (label
+                    :text   statusbar_network_var)
+                (label
+                    :text   statusbar_bluetooth_var)
+                (label
+                    :text   statusbar_audio_var)
+                (label
+                    :text   statusbar_mic_var)))
         (box
+            :height "580"
             (label
+                :class "workspaces"
                 :text statusbar_workspace_var))
         (box
             :valign         "end"
+            :height         "250"
             :orientation    "v"
             :space-evenly   false
-            (box
                 (box
-                    :orientation    "v"
-                    :class          "statusbar_battery_style"
-                    :style          "padding-bottom: 20px"
-                    :space-evenly   false
-                    (label
-                        :text   "${EWW_BATTERY["BAT1"].status == "Charging" ? "" : ""}")
-                    (scale
+                    (box
                         :orientation    "v"
-                        :flipped        true
-                        :height         100
-                        :min            0
-                        :max            100
-                        :value          "${EWW_BATTERY["BAT1"].capacity}")))
-            (label
-                :style  "padding-bottom: 0px"
-                :text   statusbar_clock_hour_var)
-            (label
-                :style  "padding-top: 0px"
-                :text   statusbar_clock_min_var))))
+                        :class          "statusbar_battery_style"
+                        :style          "padding-bottom: 20px"
+                        :space-evenly   false
+                        (label
+                            :style          "padding-bottom: 20px"
+                            :text   "${EWW_BATTERY["BAT1"].status == "Charging" ? "" : ""}")
+                        (scale
+                            :orientation    "v"
+                            :flipped        true
+                            :height         100
+                            :min            0
+                            :max            100
+                            :value          "${EWW_BATTERY["BAT1"].capacity}")))
+                (label
+                    :style  "padding-bottom: 0px"
+                    :text   statusbar_clock_hour_var)
+                (label
+                    :style  "padding-top: 0px"
+                    :text   statusbar_clock_min_var))))
+
+(defwidget center []
+    (box
+        :orientation    "v"
+        :valign         "center"
+        :space-evenly   false
+        (children)))
 
 (defwindow statusbar
 	:stacking   "fg"
@@ -68,7 +94,7 @@
 	:geometry   (geometry
 		:x      "0px"
 		:y      "0px"
-		:width  "40px"
-		:height "1060px"
+		:width  "43px"
+		:height "1070px"
 		:anchor "center right")
 	(statusbar_widget))

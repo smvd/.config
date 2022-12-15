@@ -1,0 +1,46 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.block {
+    flex: 30%;
+    border: 3px solid white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 8px #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centerDiv {
+    margin-top: auto;
+}
+
+.block h1 {
+    text-align: center;
+}
+
+.button {
+    color: #fff;
+    border: 3px solid white;
+    font-size: 25px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.15s;
+    box-shadow: 0px 0px 8px #fff;
+}
+
+.button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.imageA {display: flex;}
+.imageB {display: none;}

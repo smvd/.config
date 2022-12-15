@@ -1,5 +1,6 @@
-$foreground:    #EEEEEE;
-$background:    #000000;
+$foreground:    #ffffff;
+$second:        #000000;
+$background:    unset;
 
 * {
 	all: unset;
@@ -10,10 +11,12 @@ $background:    #000000;
 .statusbar {
     background-color:   $background;
     color:              $foreground;
-    border:             3px solid $foreground;
-    border-right:       none;
-    border-radius:      6px 0px 0px 6px;
-    padding-left:       4px;
+    padding-left:       5px;
+}
+
+.workspaces {
+    color:  $foreground;
+    padding-right: 15px;
 }
 
 label {
@@ -22,7 +25,6 @@ label {
 
 .statusbar_battery_style {
 	scale trough {
-		border-radius: 6px;
 		border: 2px solid $foreground;
 		min-width: 18px;
 	}
@@ -31,3 +33,6 @@ label {
 		background-color: $foreground;
 	}
 }
+
+
+

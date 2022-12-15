@@ -1,0 +1,58 @@
+#menu {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    overflow-y: hidden;
+    transition: 0.3s;
+}
+
+.container {
+    display: table;
+    position:   absolute;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+}
+
+.middle {
+    display:        table-cell;
+    vertical-align: middle;
+}
+
+.content {
+    display:                grid;
+    justify-content:        center;
+}
+
+.content a {
+    min-width:90vw;
+}
+
+#menu .active {
+    background-color: #fff;
+    color: #000 !important;
+}
+
+#menu #close-button{
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    right: 45px;
+}
+
+#menu-button {
+    display: none;
+    margin-top: -2%;
+    margin-bottom: auto;
+    margin-left: auto;
+    font-size: 80px;
+    margin-right: 20px;
+}
+
+#close-button {
+    font-size: 80px;
+}
